@@ -12,8 +12,9 @@ module.exports = (req, res) => {
       .get(`https://www.instagram.com/explore/tags/${hashtag}/?__a=1`)
       .then(result => {
         mcache.put(cacheName, JSON.stringify(result.data), 300000);
+        res.end(mcache.get(cacheName));
       });
+  } else {
+    res.end(mcache.get(cacheName));
   }
-
-  res.end(mcache.get(cacheName));
 };
