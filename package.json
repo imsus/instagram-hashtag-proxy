@@ -1,0 +1,19 @@
+{
+  "name": "instagram-hashtag",
+  "version": "1.0.0",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "memory-cache": "^0.2.0",
+    "micro": "^9.3.3"
+  },
+  "devDependencies": {
+    "micro-dev": "^3.0.0"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "micro",
+    "dev": "micro-dev",
+    "inspect": "node --inspect node_modules/.bin/micro-dev"
+  }
+}
